@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app='MessengerApp'>
+<head>
+	<title>messengerapp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.min.css">
+	<link rel="stylesheet" type="text/css" href="/angular-material/angular-material.css">
+	<link rel="stylesheet" type="text/css" href="/css/site.css">
+</head>
+<body><h1></h1>
+	<div class="wrapper">
+		<div class="container wrap" style="padding:20px;margin:auto;">
+
+			<div id='sideNav' ng-controller="AppCtrl" layout="column" >
+				<md-content  style="max-width:100%;text-align:center;
+				">
+					<div layout="column" style="background-color: #272b30"layout-fill layout-align="top center">
+						<div style="margin:auto;min-width:100%;">
+								<md-button style="color: rgba(255,25,25,0.7);font-family:Bree serif;font-size:2em;"ng-click="toggleRight()"
+									ng-hide="isOpenRight()"
+									class="md-default">
+									☰ Menu
+								</md-button>
+							</div>
+						</div>
+						<div flex></div>
+					</md-content>
+					<md-sidenav style="z-index:99999;"class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+						<md-toolbar class="md-theme-light">
+							<h1 style="background-color: #272b30;font-family:Lobster;color:rgba(255,25,25,0.7); font-size:1.2em;"class="md-toolbar-tools"><b>Micah Dunson</b></h1>
+						</md-toolbar>
+						<md-content ng-controller="RightCtrl" layout-padding>
+							<md-button ng-click="close()" style="margin-left:135px"class="md-primary">
+								&#x274c;
+							</md-button>
+							<div class="col-md-12 nav-hold" style="">
+								<md-button ui-sref='home'ng-click="close()" style="color:black;width:100%;font-family:Bree serif;font-size:1.5em;">Home</md-button><br>
+								<md-button ui-sref='skills' ng-click="close()" style="color:black;width:100%;font-family:Bree serif;font-size:1.5em;"> About Micah</md-button><br>
+								<md-button ui-sref='conatct' ng-click="close()" style="color:black;width:100%;font-family:Bree serif;font-size:1.5em;"> Contact </md-button><br>
+
+							</div>
+
+						</md-content>
+					</md-sidenav>
+			</div>
+
+
+
+
+			<ui-view></ui-view>
+			<!-- <div class="wrap" style="height:1px;"></div> -->
+		</div>
+	</div>
+
+	<footer>&copy 2016 Phoja Unlimited LLC. All Rights Reserved.</footer>
+
+
+
+
+<!-- Libs -->
+<script src="/angular/angular.min.js"></script>
+<script src="/angular-animate/angular-animate.min.js"></script>
+<script src="/angular-aria/angular-aria.min.js"></script>
+<script src="/angular-material/angular-material.min.js"></script>
+<script src="/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<!-- Modules -->
+	<script src="/javascript/app.js"></script>
+	<script src="/javascript/sidenav.js"></script>
+	<!-- factories -->
+	<script src="/javascript/factories/MainFactory.js"></script>
+	<!-- controllers -->
+	<script src="/javascript/controllers/MainController.js"></script>
+
+
+</body>
+</html>
