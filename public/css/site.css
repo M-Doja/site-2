@@ -1,20 +1,22 @@
-body {
+html{
+  margin: 0;
+  padding-bottom: 0;
+}
+html, body {
   background-image: url('/img/la.jpg');
   background-repeat:no-repeat;
-  background-position: center;
+  background-position:top center;
   background-attachment:fixed;
   background-size: cover;
   margin-top: -20px;
-}
-#btn {
-
+  height: 100%;
 }
 .home-container {
   text-align: center;
   padding-bottom: 40px;
 }
 .wrapper {
-  min-height: calc(97.43vh);
+  min-height: calc(95.9vh);
   margin-bottom: 0;
   padding: 1px;
 }
@@ -23,6 +25,8 @@ footer {
   font-weight: bold;
   color: white;
   background-color: #272b30;
+  padding-bottom: 0;
+  margin-top: 30px;
 }
 #site-title {
   font-size: 3em;
@@ -41,9 +45,17 @@ footer {
 }
 #github-link img {
   width:60px;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+  transition: width 2s, height 2s, transform 2s;
 }
 #linkedin-link img {
   width:80px;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+  transition: width 2s, height 2s, transform 2s;
+}
+#github-link img:hover,
+#linkedin-link img:hover {
+  -webkit-transform: rotate(720deg); transform: rotate(720deg);
 }
 
 #entryBtn {
@@ -91,6 +103,8 @@ footer {
 md-sidenav {
   max-width: 250px;
   min-width: 250px;
+  max-height: 400px;
+  min-height: 400px;
 }
 .closebtn {
   position: absolute;
