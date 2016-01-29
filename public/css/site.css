@@ -51,8 +51,7 @@ footer {
 .social {
 }
 
-/*.fade-in {*/
-  display: inline-block;
+.fade-in {
 	opacity:0;  /* make things invisible upon start */
 	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
 	-moz-animation:fadeIn ease-in 1;
@@ -175,6 +174,14 @@ md-sidenav {
   #skills, #project, #resume { margin: 50px; }
 }
 /*-------------------------- about me links ---------------------------*/
+#skills .button:hover,
+#project .button:hover,
+#resume .button:hover {
+  background-color: rgba(255,255,255,0.3);
+  padding-bottom: 10px;
+  /*border-radius: 12px;*/
+  width: 100%;
+}
 #skills, #project, #resume {
   display: inline-block;
   color: rgba(255,25,25,0.7);
@@ -183,14 +190,18 @@ md-sidenav {
   border:3px white solid;
   margin: 10px;
   /*margin-top:40px;*/
-  background-color: rgba(0,0,0,0.7)
+  background-color: rgba(0,0,0,0.7);
 }
-#skills h3, #project h3, #resume h3 {
+#skills .button, #project .button, #resume .button {
   text-shadow: 1px 1px #fff;
-  padding-top: 25%;
+  padding-top: 5%;
+  margin-top: 35%;
+  font-size: 1.7em
 }
-#skills a, #project a, #resume a {
-  color: rgba(255,25,25,0.7);
+#skills .button, #project .button, #resume .button {
+  background: transparent;
+  border: none !important;
+  /*color: rgba(255,25,25,0.7);*/
 }
 
 /*---------------------------- about me section -----------------------*/
