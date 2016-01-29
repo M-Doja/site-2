@@ -7,6 +7,9 @@ angular.module('MessengerApp', ['ui.router', 'ngMaterial']).config(function( $st
   }).state('skills', {
      url: '/skills',
      templateUrl: '/templates/skills.html'
+  }).state('contact', {
+     url: '/contact',
+     templateUrl: '/templates/contact.html'
   })
   $urlRouterProvider.otherwise('/');
 });

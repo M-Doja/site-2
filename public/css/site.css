@@ -11,15 +11,16 @@ html, body {
   margin-top: -20px;
   height: 100%;
 }
-.home-container {
-  text-align: center;
-  padding-bottom: 40px;
-}
 .wrapper {
   min-height: calc(95.9vh);
   margin-bottom: 0;
   padding: 1px;
 }
+.home-container {
+  text-align: center;
+  padding-bottom: 40px;
+}
+/*---------------- footer ------------------*/
 footer {
   font-size: 12px;
   font-weight: bold;
@@ -28,48 +29,102 @@ footer {
   padding-bottom: 0;
   margin-top: 30px;
 }
+
+/*------------------ name ---------------------*/
 #site-title {
   font-size: 3em;
   font-weight: bold;
   text-shadow: 2px 2px #d15959;
 }
+/*--------------------- headline ----------------------*/
 #site-header {
   font-size: 1.2em;
   text-shadow: 1px 1px #d15959;
 }
-#site-title, #site-header {
-  /*color:rgb(15, 77, 215);*/
-}
 #site-title, #site-header, footer {
   text-align: center;
 }
-#github-link img {
+/*------------------------- social links --------------------------*/
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+.social {
+}
+
+/*.fade-in {*/
+  display: inline-block;
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.7s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 1.2s;
+-moz-animation-delay:1.2s;
+animation-delay: 1.2s;
+}
+
+.social #github-link img {
   width:60px;
   -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
   transition: width 2s, height 2s, transform 2s;
 }
-#linkedin-link img {
+.social #gitTag {
+display: inline-block;
+padding: 5px;
+font-size: 42px;
+color:white;
+margin-right: 40px;
+}
+.social #linkedin-link img {
   width:80px;
   -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
   transition: width 2s, height 2s, transform 2s;
 }
-#github-link img:hover,
-#linkedin-link img:hover {
-  -webkit-transform: rotate(720deg); transform: rotate(720deg);
+.social #linkTag {
+  display: inline-block;
+  padding: 5px;
+  font-size: 42px;
+  color:white;
+  margin-left: 40px;
 }
 
-#entryBtn {
-  display: none;
-  text-decoration: none;
-  background-color:rgba(0, 0, 0, 0.5);;
-  text-align: center;
-  border-radius: 12px;
-  color: white;
-  font-size: 2em;
-  margin-top: 40px;
-  padding-top: 10px;
-  margin-bottom: 40px;
+.social #github-link img:hover,
+.social #linkedin-link img:hover {
+  -webkit-transform: rotate(720deg); transform: rotate(720deg);
+  display: inline-block;
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
 }
+ {
+  border-radius: 12px;
+}
+/*--------------------------- sidenav ----------------------------*/
 .md-layout-column {
   flex-direction: column;
 }
@@ -84,8 +139,7 @@ footer {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
-  }
-
+}
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -93,9 +147,6 @@ footer {
   color: #818181;
   display: block;
   transition: 0.3s
-}
-#sideNav {
-  display:;
 }
 .sidenav a:hover, .offcanvas a:focus{
   color: #f1f1f1;
@@ -113,36 +164,69 @@ md-sidenav {
   font-size: 36px !important;
   margin-left: 50px;
 }
-@media screen and (max-height: 450px) {
-.sidenav {padding-top: 15px;}
-.sidenav a {font-size: 18px;}
-}
+/*--------------------- Desktop View -----------------*/
 @media (min-width: 769px) {
-  #github-link, #linkedin-link {
-    padding:40px;
-  }
-  #github-link img {
-    width:120px;
-  }
-  #linkedin-link img {
-    width:155px;
-  }
-  #skills, #project, #contact {
-    display: inline-block;
-  }
-  #site-title {
-    font-size: 6em;
-  }
-  #site-header {
-    font-size: 2em;
-  }
+  .social #github-link, #linkedin-link { padding:40px; }
+  .social #github-link img { width:120px; }
+  .social #linkedin-link img { width:155px; }
+  #site-title { font-size: 6em; }
+  #site-header { font-size: 2em; }
+  .me { padding-right:30px; }
+  #skills, #project, #resume { margin: 50px; }
 }
-/*homepage*/
-#skills, #project, #contact {
+/*-------------------------- about me links ---------------------------*/
+#skills, #project, #resume {
+  display: inline-block;
+  color: rgba(255,25,25,0.7);
   height: 150px;
   width: 150px;
   border:3px white solid;
-  margin-left: 50px;
-  margin-top:10px;
+  margin: 10px;
+  /*margin-top:40px;*/
   background-color: rgba(0,0,0,0.7)
+}
+#skills h3, #project h3, #resume h3 {
+  text-shadow: 1px 1px #fff;
+  padding-top: 25%;
+}
+#skills a, #project a, #resume a {
+  color: rgba(255,25,25,0.7);
+}
+
+/*---------------------------- about me section -----------------------*/
+.aboutMe {
+  float:right;
+  color: white;
+  background-color: rgba(0,0,0,0.7);
+  margin-bottom: 40px;
+}
+/*self portrait*/
+.me{
+  padding-bottom: 20px;
+}
+/*about me text*/
+#span {
+  margin-top: 20px;
+  display: block;
+}
+.aboutMe p {
+  padding:35px 20px;
+  font-size: 1.25em;
+}
+#jobTitle {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+/*---------------- EXPERIENCE - TRANSITION & TRANSFORM -------------------*/
+.div2:hover {width: 300px;height: 300px;-webkit-transform: rotate(180deg); /* Safari */transform: rotate(180deg);}
+.div2 {width:50px;height:50px;background-color:lightblue;margin:5px;
+-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+transition: width 2s, height 2s, transform 2s;}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
