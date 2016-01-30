@@ -1,34 +1,20 @@
-angular.module('MessengerApp').controller('ContactController', function ($scope, $http) {
-    $scope.result = 'hidden'
-    $scope.resultMessage;
-    $scope.formData; //formData is an object holding the name, email, subject, and message
-    $scope.submitButtonDisabled = false;
-    $scope.submitted = false; //used so that form errors are shown only after the form has been submitted
-    $scope.submit = function(contactform) {
-        $scope.submitted = true;
-        $scope.submitButtonDisabled = true;
-        if (contactform.$valid) {
-            $http({
-                method  : 'POST',
-                url     : 'contact-form.php',
-                data    : $.param($scope.formData),  //param method from jQuery
-                headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  //set the headers so angular passing info as form data (not request payload)
-            }).success(function(data){
-                console.log(data);
-                if (data.success) { //success comes from the return json object
-                    $scope.submitButtonDisabled = true;
-                    $scope.resultMessage = data.message;
-                    $scope.result='bg-success';
-                } else {
-                    $scope.submitButtonDisabled = false;
-                    $scope.resultMessage = data.message;
-                    $scope.result='bg-danger';
-                }
-            });
-        } else {
-            $scope.submitButtonDisabled = false;
-            $scope.resultMessage = 'Failed <img src="http://www.chaosm.net/blog/wp-includes/images/smilies/icon_sad.gif" alt=":(" class="wp-smiley">  Please fill out all the fields.';
-            $scope.result='bg-danger';
-        }
-    }
-});
+$(document).ready(function(){
+
+
+		    $("#send_email").click(function(){
+		        var to = "dojadeveloper@gmail.com";
+						var from =document.getElementById("from").value;
+		        var subject = document.getElementById("subject").value;
+		        var text = document.getElementById("text").value;
+						console.log(to);
+		        $("#message").text("Sending E-mail...Please wait");
+		        $.get("http://localhost:3000/send",{to:to,from:from,subject:subject,text:text},function(data){
+		        if(data=="sent")
+		        {
+		            $("#message").empty().html("Email is been sent at "+to+" . Please check inbox!");
+		        }
+					});
+		    });
+
+
+		});

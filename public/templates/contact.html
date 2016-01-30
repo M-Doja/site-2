@@ -1,46 +1,38 @@
-    <div ng-controller='ContactController' class="vertical-middle">
-        <div class="container">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title">Contact Form</h2>
-                </div>
 
-                <div ng-controller="ContactController" class="panel-body">
-                    <form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="form-horizontal" role="form">
-                        <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
-                            <label for="inputName" class="col-lg-2 control-label">Name</label>
-                            <div class="col-lg-10">
-                                <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
-                            </div>
-                        </div>
-                        <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
-                            <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-                            <div class="col-lg-10">
-                                <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
-                            </div>
-                        </div>
-                        <div class="form-group" ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
-                            <label for="inputSubject" class="col-lg-2 control-label">Subject</label>
-                            <div class="col-lg-10">
-                                <input ng-model="formData.inputSubject" type="text" class="form-control" id="inputSubject" name="inputSubject" placeholder="Subject Message" required>
-                            </div>
-                        </div>
-                        <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
-                            <label for="inputMessage" class="col-lg-2 control-label">Message</label>
-                            <div class="col-lg-10">
-                                <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-lg-offset-2 col-lg-10">
-                                <button type="submit" class="btn btn-default" ng-disabled="submitButtonDisabled">
-                                    Send Message
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
-                </div>
-            </div>
-        </div>
-    </div>
+      <div class="container">
+        <form ng-submit="submitForm()"  novalidate>
+          <div id="container">
+        		<h1>Send Me A Message!</h1>
+        		<!-- <input id="from" type="text" placeholder="Sender E-mail Address" /><br><br> -->
+        		<input id="subject" type="text" placeholder=" Subject" /><br><br>
+        		<textarea id="text" cols="40" rows="5" placeholder="Message Please Include: (name, number, and contact email)"></textarea><br><br>
+        		<button id="send_email">Send Email</button>
+        		<span id="message"></span>
+      		</div>
+        </form>
+        <script>// <![CDATA[
+      	$(document).ready(function(){
+
+
+      			$("#send_email").click(function(){
+      					var to = "dojadeveloper@gmail.com";
+      					var from = document.getElementById("from").value;
+      					var subject = document.getElementById("subject").value;
+      					var text = document.getElementById("text").value;
+      					console.log(to);
+      					$("#message").text("Sending E-mail...Please wait");
+      					$.get("http://localhost:3000/send",{to:to,from:from,subject:subject,text:text},function(data){
+      					if(data=="sent")
+      					{
+      							$("#message").empty().html("Email is been sent at "+to+" . Thanks for the message! I'll get back to you as soon as I can.");
+      					}
+      				});
+              document.getElementById("from").value = '';
+              document.getElementById("subject").value = '';
+              document.getElementById("text").value = '';
+      			});
+
+
+      	});
+      	</script>
+      </div>
