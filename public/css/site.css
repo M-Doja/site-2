@@ -1,5 +1,5 @@
 
- textarea { resize:both; min-width: 225px; min-height: 100px;} /* CSS FIX FOR I.E. none|horizontal|vertical|both */
+ textarea { resize:both; min-width: 170px; min-height: 100px;} /* CSS FIX FOR I.E. none|horizontal|vertical|both */
 
  html{
    margin: 0;
