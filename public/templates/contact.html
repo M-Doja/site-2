@@ -30,7 +30,7 @@
                   return;
                 }
       					$("#message").text("Sending Message...Please wait");
-      					$.get("http://localhost:3000/send",{to:to,subject:subject,text:text},function(data){
+      					$.get("/send",{to:to,subject:subject,text:text},function(data){
       					if(data=="sent")
       					{
       							$("#message").empty().html("<br><br><br><h3 style='color:white;font-family:serif;'>Email is been sent at "+to+" .<br> Thanks for the message! I'll get back to you as soon as I can.</h3>");
