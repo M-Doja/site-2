@@ -19,7 +19,7 @@
       					var text = document.getElementById("text").value;
       					console.log(to);
       					$("#message").text("Sending E-mail...Please wait");
-      					$.get("http://localhost:3000/send",{to:to,subject:subject,text:text},function(data){
+      					$.get("/send",{to:to,subject:subject,text:text},function(data){
       					if(data=="sent")
       					{
       							$("#message").empty().html("<br><br><br><h1>Email is been sent at "+to+" .<br> Thanks for the message! I'll get back to you as soon as I can.</h1>");
