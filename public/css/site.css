@@ -1,5 +1,7 @@
 
  textarea { resize:both; min-width: 170px; min-height: 100px;} /* CSS FIX FOR I.E. none|horizontal|vertical|both */
+ @media (min-width:400px) { textarea { min-width: 270px;} }
+ @media (min-width:990px) { textarea { min-width: 350px;min-height: 150px;} }
 
  html{
    margin: 0;
