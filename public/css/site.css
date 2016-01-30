@@ -1,4 +1,4 @@
-textarea { resize:both; min-width: 280px;min-height: 100px;} /* none|horizontal|vertical|both */
+textarea { resize:both; min-width: 250px;min-height: 100px;} /* none|horizontal|vertical|both */
 
 html{
   margin: 0;
