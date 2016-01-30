@@ -36,7 +36,6 @@ app.get('/', function(req, res) {
 
 app.get('/send',function(req,res){
     var mailOptions={
-				from: 'sender@server.com',
         to : req.query.to,
         subject : req.query.subject,
         text : req.query.text
