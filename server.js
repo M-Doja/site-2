@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var app = express();
 var smtpTransport = nodemailer.createTransport("SMTP",{
+    secure: true,
     service: "Gmail",
     auth: {
 			user: "dojadeveloper@gmail.com",
