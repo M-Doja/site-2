@@ -1,8 +1,8 @@
-angular.module('MessengerApp').controller('MainController', function($http, $state, MainFactory){
+angular.module('MessengerApp').controller('MainController', function($http, $state){
 console.log("I'm the Home Controller");
   var vm = this;
 
-  
+
 //   vm.newUser = {};
 //   vm.users = [];
 //
