@@ -1,3 +1,5 @@
+textarea { resize:both; min-width: 280px;min-height: 100px;} /* none|horizontal|vertical|both */
+
 html{
   margin: 0;
   padding-bottom: 0;
