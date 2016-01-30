@@ -3,7 +3,6 @@
         <form ng-submit="submitForm()"  novalidate>
           <div id="container">
         		<h1>Send Me A Message!</h1>
-        		<!-- <input id="from" type="text" placeholder="Sender E-mail Address" /><br><br> -->
         		<input id="subject" type="text" placeholder=" Subject" /><br><br>
         		<textarea id="text" cols="40" rows="5" placeholder="Message Please Include: (name, number, and contact email)"></textarea><br><br>
         		<button id="send_email">Send Email</button>
@@ -12,22 +11,20 @@
         </form>
         <script>// <![CDATA[
       	$(document).ready(function(){
-
+            var from;
 
       			$("#send_email").click(function(){
       					var to = "dojadeveloper@gmail.com";
-      					var from = document.getElementById("from").value;
       					var subject = document.getElementById("subject").value;
       					var text = document.getElementById("text").value;
       					console.log(to);
       					$("#message").text("Sending E-mail...Please wait");
-      					$.get("http://localhost:3000/send",{to:to,from:from,subject:subject,text:text},function(data){
+      					$.get("http://localhost:3000/send",{to:to,subject:subject,text:text},function(data){
       					if(data=="sent")
       					{
-      							$("#message").empty().html("Email is been sent at "+to+" . Thanks for the message! I'll get back to you as soon as I can.");
+      							$("#message").empty().html("<br><br><br><h1>Email is been sent at "+to+" .<br> Thanks for the message! I'll get back to you as soon as I can.</h1>");
       					}
       				});
-              document.getElementById("from").value = '';
               document.getElementById("subject").value = '';
               document.getElementById("text").value = '';
       			});
