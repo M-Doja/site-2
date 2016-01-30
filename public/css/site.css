@@ -1,5 +1,3 @@
-textarea { resize:both; min-width: 225px; min-height: 100px;} /* CSS FIX FOR I.E. none|horizontal|vertical|both */
-
 html{
   margin: 0;
   padding-bottom: 0;
@@ -167,6 +165,8 @@ md-sidenav {
   font-size: 36px !important;
   margin-left: 50px;
 }
+textarea { resize:both; width: 200px; min-height: 100px;} /* CSS FIX FOR I.E. none|horizontal|vertical|both */
+
 /*--------------------- Desktop View -----------------*/
 @media (min-width: 550px) {
   .social #github-link, #linkedin-link { padding:40px; }
@@ -176,7 +176,7 @@ md-sidenav {
   #site-header { font-size: 2em; }
   .me { padding-right:20px;float:left}
   #skills, #project, #resume { margin: 50px; }
-  textarea {width: 300px;}
+  textarea {max-width: 300px;width: 300px;}
 }
 .me {
   width: 100%;
