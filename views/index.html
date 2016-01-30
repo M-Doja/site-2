@@ -3,11 +3,11 @@
 <head>
 	<title>messengerapp</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap_theme.min.css">
 	<!-- <link rel="stylesheet" type="text/css" href="/angular-material/angular-material.css"> -->
-	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/2.1.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/2.1.1/css/bootstrap-theme.min.css">
+	<!-- <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/2.1.1/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/2.0.0/css/bootstrap-theme.min.css">
 	<!-- Angular-Material-CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.4/angular-material.css">
 	<link rel="stylesheet" type="text/css" href="/css/site.css">
@@ -34,8 +34,8 @@
 						<md-toolbar class="md-theme-light">
 							<h1 style="background-color: #272b30;font-family:Lobster;color:rgba(255,25,25,0.7); font-size:1.2em;padding-top:20px;"class="md-toolbar-tools"><b>Micah Dunson</b></h1>
 						</md-toolbar>
-						<md-content ng-controller="RightCtrl" layout-padding>
-							<md-button ng-click="close()" style="margin-left:135px"class="md-primary">
+						<div ng-controller="RightCtrl" style="max-width:200px;">
+							<md-button ng-click="close()" style=""class="md-primary">
 								&#x274c;
 							</md-button>
 							<div class="col-md-12 nav-hold" style="">
@@ -45,7 +45,7 @@
 
 							</div>
 
-						</md-content>
+						</div>
 					</md-sidenav>
 			</div>
 
