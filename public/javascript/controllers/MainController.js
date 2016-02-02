@@ -1,8 +1,11 @@
 angular.module('MessengerApp').controller('MainController', function($http, $state){
 console.log("I'm the Home Controller");
   var vm = this;
+  // document.getElementById('sideNav').style.display = 'none';
 
-
+  vm.showNav = function() {
+    document.getElementById('sideNav').style.display = 'inline';
+  }
 //   vm.newUser = {};
 //   vm.users = [];
 //
