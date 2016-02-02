@@ -1,16 +1,55 @@
 <div ng-controller="MainController as vm">
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('#menu').hover(
+      function() { // mouseenter
+        // hide & compress initial text
+        $('#menu span').stop().animate({
+          width: '0px',
+          opacity: 0
+        }, $('#menu span').hide);
+
+        // show & decompress link options
+        $('#menu a').stop().show().animate({
+          width: '100px',
+          opacity: 1
+        });
+
+      },
+      function() { //mouseleave
+        // hide & compress options
+        $('#menu a').stop().animate({
+          width: '0px',
+          opacity: 0
+        }, $('#menu a').hide);
+
+        // show & decompress link options
+        $('#menu span').stop().show().animate({
+          width: '250px',
+          opacity: 1
+        });
+
+      });
+  });
+
+  </script>
   <div class="home-container">
     <h1 class="box fade-in one"id='site-title'> Micah Dunson </h1>
 
     <p class="box fade-in two" id='site-header'><b> Front End Javascript Developer </b></p>
-<h1 class="animated infinite flash" style="color:rgb(50,200,13);animation-duration: 4s;"><a id='enter' href="#" ng-click='vm.showNav()' style="text-decoration:none;color:rgb(50,200,13)">< ENTER /></a></h1>
-
+<!-- <h1 class="animated infinite flash" style="color:rgb(50,200,13);animation-duration: 4s;"></h1> -->
+<div id="menu">
+  <span>Hover for items!</span>
+  <a href="#1">Item 1</a>
+  <a href="#2">Item 2</a>
+  <a href="#3">Item 3</a>
+</div>
 
     <img ng-show='vm.start' class="animated infinite flash" height="10" style="margin-top:-105px;margin-right:325px;animation-duration: 2s;"src="/img/la.jpg"/>
 
     <div style='margin-top:40px;' class=" social box fade-in one">
-      <a id='github-link' href="#"><img src="/img/GH_icon.png" alt="Github Link" /></a>
-      <a id='linkedin-link' href="#"><img src="/img/LK_icon.png"  alt="LinkedIn Link" /></a><br>
+      <a id='github-link' href="https://github.com/M-Doja" target="_blank"><img src="/img/GH_icon.png" alt="Github Link" /></a>
+      <a id='linkedin-link' href="https://www.linkedin.com/in/micahdunson" target="_blank"><img src="/img/LK_icon.png"  alt="LinkedIn Link" /></a><br>
       <!-- <div class="box fade-in one"id="gitTag">Github</div>
       <div class="box fade-in two"id="linkTag">LinkedIn</div> -->
     </div>

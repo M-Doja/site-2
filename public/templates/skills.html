@@ -1,4 +1,5 @@
 <div ng-controller="MainController as vm">
+
   <div class="container" style="text-align:center;margin:0 auto;">
     <h1 id='site-title'> Micah Dunson </h1>
 
@@ -29,8 +30,101 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Modal Header</h4>
               </div>
-              <div class="modal-body">
-                <p>Coming Soon.</p>
+              <div class="modal-body" style='height:100%' id="skillBody">
+
+                <div class="div" id="html">
+                   <span class="span">
+                     <h2>HTML</h2>
+                     <p class="skill-description" style="font-size:20px;">
+                       HTML: 3yrs experience
+                     </p>
+                   </span>
+                   <span class='text' style="color:black;">
+                     <img src="/img/HTML5_badge.png" alt="HTML badge" width="50" />
+                     <p style="font-size:18px;">I have 3 yrs experience <wbr>building landing pages and <wbr>forms with HTML.</p>
+                 </span>
+               </div>
+
+               <div class="div" id="css">
+                  <span class="span">
+                    <h2>CSS3</h2>
+                    <p class="skill-description" style="font-size:20px;">
+                      CSS: 3yrs experience
+                    </p>
+                  </span>
+                  <span class='text' style="color:black;"><img src="/img/CSS3_badge.png" alt="CSS3 badge" width="50" /><p style="font-size:18px;">I have 3 yrs experience<wbr> working with CSS, <wbr> bootstrap, and building <wbr>responsive layouts.</p></span>
+              </div>
+
+              <div class="div" id="jquery">
+                 <span class="span">
+                   <h2>JQuery</h2>
+                   <p class="skill-description" style="font-size:20px;">
+                     JQuery: 2yrs experience
+                   </p>
+                 </span>
+                 <span class='text' style="color:black;"><img src="/img/JQurery_badge.jpg" alt="JQuery badge" width="50" /><p style="font-size:18px;">I have 2 yrs experience<wbr> working with various Jquery <wbr>plugins, JSON and making <wbr>AJAX requests.</p></span>
+             </div>
+
+             <div class="div" id="javascript">
+                <span class="span">
+                  <h2>Javascript</h2>
+                  <p class="skill-description" style="font-size:20px;">
+                    Javascript: 3yrs experience
+                  </p>
+                </span>
+                <span class='text' style="color:black;"><img src="/img/Javascript_badge.png" alt="Javascript badge" width="50" /><p style="font-size:18px;">I have 3 yrs experience<wbr> working with Javascript <wbr>and adding functionality <wbr>to forms and websites.</p></span>
+            </div>
+
+            <div class="div" id="angular">
+               <span class="span">
+                 <h2>Angular</h2>
+                 <p class="skill-description" style="font-size:20px;">
+                   Angular: 1yr experience
+                 </p>
+               </span>
+               <span class='text' style="color:black;"><img src="/img/Angular_badge.png" alt="Angular badge" width="50" /><p style="font-size:18px;">I have 1 yr experience<wbr> working with Angular <wbr>and building SPA websites<wbr> and apps.</p></span>
+           </div>
+
+           <div class="div" id="meteor">
+              <span class="span">
+                <h2>Meteor</h2>
+                <p class="skill-description" style="font-size:20px;">
+                  Meteor: 1yr experience
+                </p>
+              </span>
+              <span class='text' style="color:black;"><img src="/img/Meteor_badge.png" alt="Meteor badge" width="50" /><p style="font-size:18px;">I have 1 yr experience<wbr> working with Meteor and<wbr> building prototype<wbr> applications.</p></span>
+          </div>
+
+          <div class="div" id="node">
+             <span class="span">
+               <h2>Node</h2>
+               <p class="skill-description" style="font-size:20px;">
+                 Node: 1yr experience
+               </p>
+             </span>
+             <span class='text' style="color:black;"><img src="/img/Node_badge.png" alt="Node badge" width="50" /><p style="font-size:18px;">I have 1 yr experience<wbr> working with Node <wbr>and sending and retrieving<wbr> data from databases.</p></span>
+         </div>
+
+         <div class="div" id="express">
+            <span class="span">
+              <h2>Express</h2>
+              <p class="skill-description" style="font-size:20px;">
+                Express: 1yr experience
+              </p>
+            </span>
+            <span class='text' style="color:black;"><img src="/img/Expressjs_badge.png" alt="Express badge" width="50" /><p style="font-size:18px;">I have 1 yr experience<wbr> working with Express <wbr>and handling requests<wbr> made to and from the server.</p></span>
+        </div>
+
+        <div class="div" id="mongodb">
+           <span class="span">
+             <h2>Mongodb</h2>
+             <p class="skill-description" style="font-size:20px;">
+               Mongodb: 1yr experience
+             </p>
+           </span>
+           <span class='text' style="color:black;"><img src="/img/Mongo_badge.png" alt="Mongodb badge" width="50" /><p style="font-size:18px;">I have 1 yr experience<wbr> working with Mongo DB <wbr>and sending data<wbr> to and from  databases.</p></span>
+       </div>
+
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -67,22 +161,24 @@
         <div id="resume">
           <button class='button' data-toggle="modal" data-target="#myModal3">Resume</button>
                     <!-- Modal -->
-          <div id="myModal3" class="modal fade" role="dialog">
-            <div class="modal-dialog">
+          <div id="myModal3" class="modal fade container" style='margin-top:40px;' role="dialog">
+            <!-- <div class="modal-dialog"> -->
 
               <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Resume</h4>
-                </div>
-                <div class="modal-body">
-                  <p>Yep..you guessed it . Check back in a few days and I should be all set up. Sorry for the inconvenience.</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-              </div>
+               <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal" style="margin:50px;">&times;<br>Close</button>
+
+                  <a href="https://od.lk/d/MV8xMjY2Mjk3Nzdf/Developer%20Resume.doc" id='resumeDnld'><h3>Download Resume</h3></a>
+
+
+                      <iframe src="/img/Resume.pdf"></iframe>
+
+
+                <!-- </div>
+                <div class="modal-footer"> -->
+                  <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                <!-- </div>
+              </div>-->
 
             </div>
           </div> <!--modal end-->
@@ -95,3 +191,159 @@
   </div>
 
 </div>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#html').hover(function() { // mouseenter
+      // hide & compress initial text
+      $('#html .span').stop().animate({
+        width: '0px', opacity: 0}, $('#html .span').hide);
+      // show & decompress link options
+      $('#html .text').stop().show().animate({
+        width: '90%', opacity: 1});
+    },function() { //mouseleave
+      // hide & compress options
+      $('#html .text').stop().animate({
+        width: '0px',opacity: 0}, $('#html .text').hide);
+      // show & decompress link options
+      $('#html .span').stop().show().animate({
+        width: '250px',opacity: 1});
+    });
+
+    $('#css').hover(function() { // mouseenter
+        // hide & compress initial text
+        $('#css .span').stop().animate({
+          width: '0px', opacity: 0}, $('#css .span').hide);
+        // show & decompress link options
+        $('#css .text').stop().show().animate({
+          width: '90%', opacity: 1});
+      },function() { //mouseleave
+        // hide & compress options
+        $('#css .text').stop().animate({
+          width: '0px',opacity: 0}, $('#css .text').hide);
+        // show & decompress link options
+        $('#css .span').stop().show().animate({
+          width: '250px',opacity: 1});
+      });
+
+      $('#jquery').hover(function() { // mouseenter
+          // hide & compress initial text
+          $('#jquery .span').stop().animate({
+            width: '0px', opacity: 0}, $('#jquery .span').hide);
+          // show & decompress link options
+          $('#jquery .text').stop().show().animate({
+            width: '90%', opacity: 1});
+        },function() { //mouseleave
+          // hide & compress options
+          $('#jquery .text').stop().animate({
+            width: '0px',opacity: 0}, $('#jquery .text').hide);
+          // show & decompress link options
+          $('#jquery .span').stop().show().animate({
+            width: '250px',opacity: 1});
+        });
+
+        $('#javascript').hover(function() { // mouseenter
+            // hide & compress initial text
+            $('#javascript .span').stop().animate({
+              width: '0px', opacity: 0}, $('#javascript .span').hide);
+            // show & decompress link options
+            $('#javascript .text').stop().show().animate({
+              width: '90%', opacity: 1});
+          },function() { //mouseleave
+            // hide & compress options
+            $('#javascript .text').stop().animate({
+              width: '0px',opacity: 0}, $('#javascript .text').hide);
+            // show & decompress link options
+            $('#javascript .span').stop().show().animate({
+              width: '250px',opacity: 1});
+          });
+
+          $('#angular').hover(function() { // mouseenter
+              // hide & compress initial text
+              $('#angular .span').stop().animate({
+                width: '0px', opacity: 0}, $('#angular .span').hide);
+              // show & decompress link options
+              $('#angular .text').stop().show().animate({
+                width: '90%', opacity: 1});
+            },function() { //mouseleave
+              // hide & compress options
+              $('#angular .text').stop().animate({
+                width: '0px',opacity: 0}, $('#angular .text').hide);
+              // show & decompress link options
+              $('#angular .span').stop().show().animate({
+                width: '250px',opacity: 1});
+            });
+
+            $('#meteor').hover(function() { // mouseenter
+                // hide & compress initial text
+                $('#meteor .span').stop().animate({
+                  width: '0px', opacity: 0}, $('#meteor .span').hide);
+                // show & decompress link options
+                $('#meteor .text').stop().show().animate({
+                  width: '90%', opacity: 1});
+              },function() { //mouseleave
+                // hide & compress options
+                $('#meteor .text').stop().animate({
+                  width: '0px',opacity: 0}, $('#meteor .text').hide);
+                // show & decompress link options
+                $('#meteor .span').stop().show().animate({
+                  width: '250px',opacity: 1});
+              });
+
+              $('#node').hover(function() { // mouseenter
+                  // hide & compress initial text
+                  $('#node .span').stop().animate({
+                    width: '0px', opacity: 0}, $('#node .span').hide);
+                  // show & decompress link options
+                  $('#node .text').stop().show().animate({
+                    width: '90%', opacity: 1});
+                },function() { //mouseleave
+                  // hide & compress options
+                  $('#node .text').stop().animate({
+                    width: '0px',opacity: 0}, $('#node .text').hide);
+                  // show & decompress link options
+                  $('#node .span').stop().show().animate({
+                    width: '250px',opacity: 1});
+                });
+
+                $('#express').hover(function() { // mouseenter
+                    // hide & compress initial text
+                    $('#express .span').stop().animate({
+                      width: '0px', opacity: 0}, $('#express .span').hide);
+                    // show & decompress link options
+                    $('#express .text').stop().show().animate({
+                      width: '90%', opacity: 1});
+                  },function() { //mouseleave
+                    // hide & compress options
+                    $('#express .text').stop().animate({
+                      width: '0px',opacity: 0}, $('#express .text').hide);
+                    // show & decompress link options
+                    $('#express .span').stop().show().animate({
+                      width: '250px',opacity: 1});
+                  });
+
+                  $('#mongodb').hover(function() { // mouseenter
+                      // hide & compress initial text
+                      $('#mongodb .span').stop().animate({
+                        width: '0px', opacity: 0}, $('#mongodb .span').hide);
+                      // show & decompress link options
+                      $('#mongodb .text').stop().show().animate({
+                        width: '90%', opacity: 1});
+                    },function() { //mouseleave
+                      // hide & compress options
+                      $('#mongodb .text').stop().animate({
+                        width: '0px',opacity: 0}, $('#mongodb .text').hide);
+                      // show & decompress link options
+                      $('#mongodb .span').stop().show().animate({
+                        width: '250px',opacity: 1});
+                    });
+
+
+
+
+
+
+
+
+});
+
+</script>

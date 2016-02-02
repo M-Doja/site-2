@@ -1,3 +1,5 @@
+
+
 angular.module('MessengerApp').controller('MainController', function($http, $state){
 console.log("I'm the Home Controller");
   var vm = this;

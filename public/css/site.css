@@ -170,6 +170,25 @@
    font-size: 36px !important;
    margin-left: 50px;
  }
+/* test zone*/
+ .div {
+  width: auto;
+}
+.div * {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 30px;
+  text-align: center;
+}
+.div .text {
+  display: none;
+  width: 0px;
+  opacity: 0;
+}
+.div .span {
+  display: inline-block;
+  width: 250px;
+}
  /*--------------------- Desktop View -----------------*/
  @media (min-width: 550px) {
    .social #github-link, #linkedin-link { padding:40px; }
@@ -180,6 +199,7 @@
    .me { padding-right:20px;float:left}
    #skills, #project, #resume { margin: 50px; }
    textarea {width: 300px;}
+   #resumeDnld h3{display: none;}
  }
  .me {
    width: 100%;
@@ -187,6 +207,12 @@
    display: inline-block;
  }
  /*-------------------------- about me links ---------------------------*/
+ .modal-body {
+   background-color: white;
+ }
+ #skillBody {
+   height: 400px;
+ }
  #skills .button:hover,
  #project .button:hover,
  #resume .button:hover {
@@ -217,6 +243,7 @@
    border: none !important;
    /*color: rgba(255,25,25,0.7);*/
  }
+ iframe {width:80%; height: 450px;}
  form button {font-size:1.3em;color:white;}
  form button:hover {
    background-color: rgba(255,255,255,0.3);
