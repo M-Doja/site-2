@@ -170,17 +170,17 @@
    font-size: 36px !important;
    margin-left: 50px;
  }
-/* test zone*/
+/* test zone - skills modal*/
  .div {
   width: auto;
 }
-.div * {
+/*.div * {*/
   overflow: hidden;
   white-space: nowrap;
   font-size: 30px;
   text-align: center;
 }
-.div .text {
+/*.div .text {*/
   display: none;
   width: 0px;
   opacity: 0;
@@ -201,6 +201,7 @@
    textarea {width: 300px;}
    #resumeDnld h3{display: none;}
  }
+ .skill-description {display: none;}
  .me {
    width: 100%;
    max-width: 360px;
@@ -243,7 +244,7 @@
    border: none !important;
    /*color: rgba(255,25,25,0.7);*/
  }
- iframe {width:80%; height: 450px;}
+ iframe {width:80%; height: 450px; margin: 15px auto;}
  form button {font-size:1.3em;color:white;}
  form button:hover {
    background-color: rgba(255,255,255,0.3);
