@@ -33,7 +33,7 @@
       					$.get("/send",{to:to,subject:subject,text:text},function(data){
       					if(data=="sent")
       					{
-      							$("#message").empty().html("<br><br><br><h4 style='color:white;font-family:serif;margin-top:-60px;'>Email is been sent at "+to+" .<br> Thanks for the message! I'll get back to you as soon as I can.</h4>");
+      							$("#message").empty().html("<br><br><br><h4 style='color:white;font-family:serif;margin-top:-60px;'>Email has been sent to "+to+" .<br> Thanks for the message! I'll get back to you as soon as I can.</h4>");
       					}
       				});
               document.getElementById("subject").value = '';
